@@ -1,0 +1,1000 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --activeColor: #FF9E0D;
+    --Black: #1F1F1F;
+    --Gray: #EDEDED;
+    --White: #FFF;
+}
+
+/* starter styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    /* border: 1px solid red; */
+}
+
+ul,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+
+/* Main styles */
+/* Landing styles */
+.landing {
+    background: url(assests/imgTop.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+}
+
+.landing::after {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Landing Header start */
+.landing header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 5%;
+}
+
+.landing header .headerLinks ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.landing header .headerLinks ul li a {
+    text-transform: uppercase;
+    color: var(--White);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.5s color;
+}
+
+.landing header .headerLinks ul li a:hover {
+    color: var(--activeColor) !important;
+    border-bottom: 2px solid var(--activeColor);
+}
+
+.active {
+    color: var(--activeColor) !important;
+    border-bottom: 2px solid var(--activeColor);
+}
+
+.landing .headerSocialIcons ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.landing .headerSocialIcons ul li a {
+    color: var(--White);
+    transition: 0.5s;
+}
+
+.landing .headerSocialIcons ul li a:hover,
+.landing header .headerSocialIcons ul li a svg path:hover {
+    color: var(--activeColor);
+    fill: var(--activeColor);
+}
+
+.landing header .headerBtn {
+    display: none;
+}
+
+.landing header .headerBtn button {
+    color: var(--White);
+    font-size: 30px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Responsive header styles */
+.responsiveNav {
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: 0.5s transform ease;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.2);
+    /* Adjust the alpha value for transparency */
+    border-radius: 10px;
+    /* Optional: Add border-radius for rounded corners */
+    backdrop-filter: blur(10px);
+    /* Adjust the blur value for the glass effect */
+    padding: 20px;
+    /* Add padding as needed */
+
+}
+
+.headerBtn {
+    z-index: 999;
+}
+
+.vis {
+
+    transform: translateX(0%) !important;
+}
+
+.hiddennav {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.hiddennav li {
+    font-size: 32px;
+    padding: 7%;
+    color: white;
+}
+
+#btn {
+    color: var(--White);
+    font-size: 30px;
+    border: 0;
+    background-color: transparent;
+    position: fixed;
+    margin-bottom: -18%;
+    top: 1%;
+    margin-right: 5%;
+    right: 0%;
+}
+
+.hiddennav li a {
+    color: white;
+}
+
+/* Responsive header end */
+/* landing Header End */
+/* Landing Text */
+.landing .landingText {
+    text-align: start;
+    text-transform: uppercase;
+    color: var(--White);
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 3.5%;
+}
+
+.landing .landingText h1 {
+    font-size: 128px;
+    line-height: 150px;
+}
+
+.landing .landingText button {
+    padding: 3% 3%;
+    background-color: var(--White);
+    border: 0;
+    border-left: 6px solid var(--activeColor);
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-top: 3%;
+}
+
+/* Landing Text End */
+
+@media screen and (max-width:980px) {
+
+    header .headerSocialIcons {
+        display: none;
+    }
+
+    .landing .landingText {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: calc(100vh - 76.78px);
+    }
+
+    .landing .landingText h1 {
+        text-align: center;
+        font-size: 64px;
+    }
+}
+
+@media screen and (max-width:758px) {
+    .landing .landingText h1 {
+        font-size: 38px;
+        line-height: 80px;
+    }
+
+    .landing .headerLinks {
+        display: none;
+    }
+
+    .landing header .headerBtn {
+        display: block;
+    }
+}
+
+/* Landing page End */
+
+/* About Us Start */
+main .aboutUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFEFEF;
+    gap: 120px;
+    padding: 8% 8%;
+}
+
+main .aboutUs .aboutUsLeft {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+main .aboutUs .aboutUsLeft h3 {
+    max-width: 380px;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 119%;
+}
+
+main .aboutUs .aboutUsLeft span {
+    position: relative;
+    color: #666;
+    letter-spacing: 4.48px;
+}
+
+main .aboutUs .aboutUsLeft span::after {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--activeColor);
+}
+
+main .aboutUs .aboutUsText span {
+    font-size: 1.3rem;
+}
+
+main .aboutUs .aboutUsText p {
+    color: #666;
+    font-size: 1.2rem;
+    max-width: 640px;
+}
+
+main .aboutUs .aboutUsText button {
+    color: var(--White);
+    background-color: var(--Black);
+    border: 0;
+    border-left: 6px solid var(--activeColor);
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:980px) {
+    main .aboutUs {
+        padding: 5% 2.5%;
+    }
+
+    main .aboutUs .aboutUsText p,
+    main .aboutUs .aboutUsText span {
+        font-size: 1rem;
+    }
+
+    main .aboutUs .aboutUsText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    main .aboutUs .aboutUsLeft span::after {
+        display: none;
+    }
+
+    main .aboutUs .aboutUsLeft h3 {
+        font-size: 30px;
+    }
+
+    main .aboutUs .aboutUsText button {
+        padding: 7.5px 20px;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:758px) {
+    main .aboutUs {
+        padding: 5% 2.5%;
+        flex-wrap: wrap;
+        gap: 10px;
+        text-align: center;
+    }
+
+    main .aboutUs .aboutUsText p,
+    main .aboutUs .aboutUsText span {
+        font-size: 1.3rem;
+    }
+
+    main .aboutUs .aboutUsText button {
+        padding: 15px 40px;
+        font-size: 1.3rem;
+    }
+}
+
+/* About Us End */
+
+/* Info start */
+main .info {
+    background: url(assests/infoImg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 5%;
+}
+
+main .info::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+
+.info .infoContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info .infoContainer .infoItem {
+    color: var(--White);
+}
+
+.info .infoContainer .infoItem h4 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.info .infoContainer .infoItem p {
+    color: var(--Gray);
+    font-size: 18px;
+    margin-bottom: 36px;
+}
+
+.info .infoContainer .infoItem button {
+    color: var(--White);
+    background-color: var(--Black);
+    border: 0;
+    border-left: 6px solid var(--activeColor);
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:980px) {
+    .info .infoContainer {
+        gap: 25px;
+    }
+
+    .info .infoContainer .infoItem {
+        text-align: center;
+    }
+}
+
+/* Info End */
+
+/* Sponser Start */
+.sponsor {
+    background-color: var(--White);
+    padding: 30px;
+}
+
+.sponsor .sponsorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sponsor .sponsorContainer .sponsorItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Gray);
+    width: 380px;
+    height: 188px;
+    padding: 25px;
+    gap: 20px;
+}
+
+.sponsor .sponsorContainer .sponsorItem img {
+    width: 64px;
+}
+
+.sponsor .sponsorContainer .sponsorItem span {
+    text-transform: capitalize;
+    color: #C0C0C0;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.88px;
+}
+
+.sponsor .sponsorContainer> :nth-child(2) {
+    background-color: var(--Black);
+    border-left: 8px solid var(--activeColor);
+}
+
+.sponsor .sponsorContainer> :nth-child(2) span {
+    color: var(--White);
+}
+
+/* Sponser End */
+
+/* Team Members Start */
+.teamMembersContainer {
+    padding: 30px 140px;
+}
+
+.teamMembersContainer .topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.teamMembersContainer .topSection .text h3 {
+    font-size: 45px;
+}
+
+.teamMembersContainer .topSection .text span {
+    font-size: 14px;
+    letter-spacing: 4.48px;
+    position: relative;
+    color: #666;
+}
+
+.teamMembersContainer .topSection .text span::after {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--activeColor);
+}
+
+/* Fix BUttons */
+.teamMembersContainer .topSection .buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.teamMembersContainer .topSection .buttons>* {
+    padding: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--Black);
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.teamMembersContainer .topSection .buttons>:nth-child(1) {
+    border: 1px solid #D3D3D3;
+    color: #D3D3D3;
+}
+
+.teamMembersContainer .topSection .buttons>*>* {
+    font-size: 20px;
+}
+
+/* Please Fix Buttons Don't Forget */
+
+.teamMembers .teamMembersList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 16px 50px;
+}
+
+.teamMembers .teamMembersList .teamMemberProfile {
+    text-align: center;
+}
+
+.teamMembers .teamMembersList .teamMemberProfile h5 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.teamMembers .teamMembersList .teamMemberProfile span {
+    text-transform: capitalize;
+    color: #ADADAD;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media screen and (max-width:758px) {
+
+    .teamMembersContainer {
+        padding: 30px 70px;
+    }
+
+    .teamMembersContainer .topSection .text h3,
+    .teamMembersContainer .topSection .text span {
+        text-align: center;
+    }
+
+}
+
+/* Team members end */
+
+/* Feedback Start */
+.feedback {
+    background: url(assests/client\ notes.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+main .feedback::after {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.feedback .feedbackContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 85px;
+    gap: 60px;
+}
+
+.feedback .feedbackContainer .feedbackHeader span {
+    position: relative;
+    text-transform: uppercase;
+    color: #EDEDED;
+    font-weight: 400;
+    letter-spacing: 4.48px;
+}
+
+.feedback .feedbackContainer .feedbackHeader span::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--activeColor);
+}
+
+.feedback .feedbackContainer .feedbackHeader h3 {
+    color: #FFF;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.feedback .feedbackContainer .feedbackItems {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.feedback .feedbackContainer .feedbackItems .feedbackItem {
+    max-width: 420px;
+    max-height: 269px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--White);
+}
+
+.feedback .feedbackContainer .feedbackItems .feedbackItem p {
+    color: #666;
+    margin-bottom: 36px;
+}
+
+.feedback .feedbackContainer .feedbackItems .feedbackItem span {
+    display: block;
+    position: relative;
+    text-align: start;
+    margin-left: 55px;
+    color: var(--Black);
+}
+
+.feedback .feedbackContainer .feedbackItems .feedbackItem span::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--activeColor);
+}
+
+.feedback .feedbackContainer .feedbackIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+.feedback .feedbackContainer .feedbackIcons>* {
+    width: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:980px) {
+    .feedback .feedbackContainer .feedbackItems {
+        flex-wrap: wrap;
+    }
+}
+
+/* Feedback End */
+
+/* Achievements Start */
+
+.achievements {
+    background-color: var(--Gray);
+    padding: 140px 70px;
+}
+
+.achievements .achievementsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.achievements .achievementsContainer .achievementItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.achievements .achievementsContainer .achievementItem :nth-child(1) {
+    color: #C0C0C0;
+    font-size: 102px;
+}
+
+.achievements .achievementsContainer .achievementItem span+span {
+    color: var(--Black);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.achievements .achievementsContainer :nth-child(2) :nth-child(1) {
+    color: var(--activeColor);
+}
+
+/* Achievements End */
+
+/* News Start */
+
+.newsArticles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 80px;
+}
+
+.newsArticles .topSection {
+    align-self: flex-start;
+    padding-inline: 30px;
+}
+
+.newsArticles .topSection span {
+    position: relative;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 4.48px;
+    text-transform: uppercase;
+}
+
+.newsArticles .topSection span::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--activeColor);
+}
+
+.newsArticles .topSection h3 {
+    color: var(--Black);
+    font-size: 45px;
+}
+
+.newsArticles .newsArticlesContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.newsArticles .newsArticlesContainer> :nth-child(1) {
+    background: url(assests/news\ Imgs/img1.png);
+}
+
+.newsArticles .newsArticlesContainer> :nth-child(1)::before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.54) 0%, #000 100%);
+}
+
+.newsArticles .newsArticlesContainer> :nth-child(2) {
+    background: url(assests/news\ Imgs/img2.png);
+}
+
+.newsArticles .newsArticlesContainer> :nth-child(2)::before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.19) 4.66%, rgba(0, 0, 0, 0.90) 100%, #000 100%);
+}
+
+.newsArticles .newsArticlesContainer>:nth-child(3) {
+    background: url(assests/news\ Imgs/img3.png);
+}
+
+.newsArticles .newsArticlesContainer>:nth-child(3)::before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.19) 4.66%, rgba(0, 0, 0, 0.90) 100%, #000 100%);
+}
+
+.newsArticles .newsArticlesContainer .newsArticlesItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    max-width: 420px;
+    min-height: 370px;
+    padding: 25px;
+    z-index: 0;
+}
+
+.newsArticles .newsArticlesContainer .newsArticlesItem span {
+    color: #F2F2F2;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.newsArticles .newsArticlesContainer .newsArticlesItem p {
+    color: #FFF;
+    font-family: Oswald;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 1.28px;
+    text-transform: uppercase;
+}
+
+.newsArticles button {
+    color: var(--White);
+    background-color: var(--Black);
+    border: 0;
+    border-left: 6px solid var(--activeColor);
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:785px) {
+    .newsArticles {
+        padding: 40px;
+    }
+}
+
+/* News End */
+/* Start Contact Us */
+.contactUs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: url(assests/Lastimg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 80px;
+}
+
+.contactUs::before {
+    content: '';
+    position: absolute;
+    display: block;
+    inset: 0;
+    width: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contactUs .contactUsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+}
+
+.contactUs .contactUsContainer h2 {
+    align-self: flex-start;
+    color: var(--White);
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.contactUs .contactUsContainer p {
+    color: var(--Gray);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.contactUs .contactUsContainer p span {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.contactUs .contactUsContainer button {
+    color: var(--Black);
+    background-color: var(--White);
+    border: 0;
+    border-left: 6px solid var(--activeColor);
+    padding: 25px 50px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: calc(40px - 16px);
+}
+
+/* Contact Us End */
+
+/* Footer Start */
+
+footer {
+    padding: 150px 0 10px;
+}
+
+
+footer .footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 100px;
+    gap: 20px;
+}
+
+footer .footerContainer .logo {
+    display: flex;
+    flex-direction: column;
+    color: #666;
+    gap: 20px;
+    font-size: 18px;
+}
+
+footer .footerContainer .logo img {
+    width: 130px;
+}
+
+footer .footerContainer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer .footerContainer ul li a {
+    transition: 0.2s;
+}
+
+footer .footerContainer ul li a:hover {
+    color: var(--activeColor);
+}
+
+footer .footerContainer>:nth-child(2) :first-child> :first-child {
+    color: var(--activeColor);
+}
+
+footer .footerContainer :nth-child(3) {
+    align-self: flex-start;
+}
+
+footer .footerContainer ul li a {
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+footer .footerContainer .info {
+    display: flex;
+    flex-direction: column;
+    color: #666;
+    gap: 20px;
+}
+
+footer .footerText {
+    display: flex;
+    /* Added */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #DADADA;
+    padding-top: 30px;
+    gap: 10px;
+}
+
+footer .footerText span {
+    color: #666;
+    font-weight: 400;
+}
+
+footer .footerText .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Footer End  DONE! 👏👏*/
