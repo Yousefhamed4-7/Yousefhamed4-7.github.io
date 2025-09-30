@@ -30,6 +30,11 @@ img {
 
 
 /* Main styles */
+
+html{
+    scroll-behavior: smooth;
+}
+
 /* Landing styles */
 .landing {
     background: url(assests/imgTop.png);
