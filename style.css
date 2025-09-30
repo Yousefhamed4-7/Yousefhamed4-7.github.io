@@ -620,6 +620,7 @@ main .feedback::after {
     max-width: 420px;
     max-height: 269px;
     padding: 20px;
+    font-size: 0.8em;
     text-align: center;
     background-color: var(--White);
 }
